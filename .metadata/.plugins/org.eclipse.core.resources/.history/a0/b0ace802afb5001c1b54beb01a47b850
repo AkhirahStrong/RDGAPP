@@ -1,0 +1,76 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class DiceGame {
+	
+public static int generateRandomDieRoll( int diSides) {
+	
+	Scanner scnr = new Scanner(System.in);
+	
+	
+	int dice1;
+	int dice2;
+	int diSides1;
+	int rollCnt = 0;
+	String yesNo;
+	
+	System.out.println("Welcome to the Grand Circus Casino! ");
+	
+	System.out.println("How many sides should each die have?");
+	diSides1 = scnr.nextInt();
+	
+	do {
+		
+		dice1 = (int) (diSides1 * Math.random());
+		dice2 = (int) (diSides1 * Math.random());
+		
+		dice1 = generateRandomDieRoll(diSides1);
+		rollCnt++;
+		
+		System.out.println("Roll " + rollCnt + ":");
+		System.out.println(dice1);
+		System.out.println(dice2);
+		
+		scnr.nextLine();
+		
+		System.out.println("Do you want to roll again? (Y/N)");
+		yesNo = scnr.nextLine();
+		
+		if(yesNo.equalsIgnoreCase("N") ) {
+			System.out.println("Shucks! Hate to seeyou go, but would love to see you again!");
+		}
+	
+	}while(yesNo.equalsIgnoreCase("Y"));
+	
+	return rollCnt;
+		
+		
+	}	
+	
+	
+
+	public static void main(String[] args) {
+		// This dice game will ask for the user to enter how 
+		//many sides the dice should have, and generate a random number
+		
+		//Scanner scnr = new Scanner(System.in);
+		
+		generateRandomDieRoll();
+		
+		
+		
+		
+				
+
+	}
+
+
+
+	private static void generateRandomDieRoll() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

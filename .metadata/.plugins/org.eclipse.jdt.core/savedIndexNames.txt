@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Ahky Media Center\Desktop\BootCamp\Projects\DiceGame\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3162089354.index
+760091825.index
